@@ -95,3 +95,30 @@ These divergent philosophies profoundly shape how users interact with their mobi
 
 ---
 
+# IOS Lifecycle
+
+#### Execution States for Apps
+
+## 1. Not Running
+- The app has not been launched or has been terminated by the system.
+
+## 2. Inactive
+- The app is entering the foreground state but is **not receiving events**.
+
+## 3. Active
+- The app is in the foreground and **can process events**.
+
+## 4. Background
+- In this state:
+  - If there is executable code, it will execute.
+  - If there is no executable code or execution is complete, the app will be **suspended immediately**.
+
+## 5. Suspended
+- The app is in the background (**in memory**) but is **not executing code**.
+- If the system runs out of memory, it will **terminate** the app.
+
+![IOS Lifecycle](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*d5BcTFQ_BK-o2SglPjPVBQ.png)
+
+### ViewController Lifecycle
+![ViewController Lifecycle](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*jb1Y17gwQCRi2XCKy7_QHQ.png)
+
