@@ -13,7 +13,7 @@ Koşul (doğru/yanlış kontrol için)
 
 import Foundation
 
-let areas = ["Maltepe", "beykoz", "kadikoy", "atasehir", "pendik"]
+let areas = ["maltepe", "beykoz", "kadikoy", "atasehir", "pendik"]
 
 let chosenWord = areas.randomElement()!
 
