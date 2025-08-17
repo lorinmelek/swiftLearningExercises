@@ -1,0 +1,25 @@
+# macOS sistem dosyaları
+.DS_Store
+
+# Xcode ayar dosyaları
+*.xcworkspace/
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+DerivedData/
+
+# Playground gereksiz dosyaları
+*.xcplayground
+timeline.xctimeline
+playground.xcworkspace/
+
+# Tüm Playground klasörlerindeki her şeyi ignore et
+*.playground/*
+
+# Ama Contents.swift dosyalarını hariç tut
+!*.playground/Contents.swift
+
+# Markdown dosyaları (notların) hariç tutulsun
+!*.md
+
