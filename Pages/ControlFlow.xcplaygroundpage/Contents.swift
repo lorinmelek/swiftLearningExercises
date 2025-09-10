@@ -32,6 +32,7 @@ if let name = optionalName {
     greeting = "Hello, stranger"
 }
 print(greeting) // "Hello, John Appleseed"
+
  //: ## Optional
 //: You can use the nil-coalescing operator (`??`) to provide a default value for an optional
 let nickName: String? = nil
