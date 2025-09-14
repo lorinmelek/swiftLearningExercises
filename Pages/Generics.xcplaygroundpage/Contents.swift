@@ -34,3 +34,5 @@ func anyCommonElements<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool
    return false
 }
 anyCommonElements([1, 2, 3], [3])
+
+// generics for classes

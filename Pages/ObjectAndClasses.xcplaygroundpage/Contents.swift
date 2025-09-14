@@ -76,3 +76,4 @@ circle.circumference = 31.41592653589793
 print(circle.radius)  // 5.0
 print(circle.simpleDescription())  // "A circle with radius 5.0."
 
+//static class ifinal class 

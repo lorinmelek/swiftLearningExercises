@@ -55,3 +55,4 @@ if quotation == sameQuotation {
 }
 // Prints "These two strings are considered equal"
 
+// hazır fonksiyonları ekle örnkelerle

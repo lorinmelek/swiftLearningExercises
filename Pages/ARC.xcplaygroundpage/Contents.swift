@@ -19,3 +19,7 @@ class Apartment {
     weak var tenant: Person?
     deinit { print("Apartment \(unit) is being deinitialized") }
 }
+
+// struct ile örneklendir /lazy weak
+// arc ın görevi ne mantık olarak göster
+// memory leak 

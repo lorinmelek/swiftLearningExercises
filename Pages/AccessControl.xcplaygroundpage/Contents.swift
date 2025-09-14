@@ -6,7 +6,6 @@ internal class SomeInternalClass {}
 fileprivate class SomeFilePrivateClass {}
 private class SomePrivateClass {}
 
-
 open var someOpenVariable = 0
 public var somePublicVariable = 0
 internal let someInternalConstant = 0
@@ -20,20 +19,20 @@ public class SomePublicClass {                   // explicitly public class
     private func somePrivateMethod() {}          // explicitly private class member
 }
 
-
 class SomeInternalClass {                        // implicitly internal class
     var someInternalProperty = 0                 // implicitly internal class member
     fileprivate func someFilePrivateMethod() {}  // explicitly file-private class member
     private func somePrivateMethod() {}          // explicitly private class member
 }
 
-
 fileprivate class SomeFilePrivateClass {         // explicitly file-private class
     func someFilePrivateMethod() {}              // implicitly file-private class member
     private func somePrivateMethod() {}          // explicitly private class member
 }
 
-
 private class SomePrivateClass {                 // explicitly private class
     func somePrivateMethod() {}                  // implicitly private class member
 }
+
+// open public farkını göster
+// final class göster

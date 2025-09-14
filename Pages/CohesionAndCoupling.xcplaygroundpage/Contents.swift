@@ -5,13 +5,7 @@ High cohesion = everything inside the class serves one clear purpose (great).
  
 Low cohesion = the class does a bit of everything (bad).
 */
-/*
- ## Coupling: how tightly classes depend on each other:
 
- Low (loose) coupling = classes are easy to separate/replace (good).
-
- High (tight) coupling = changing one breaks the other (bad).
- */
 struct Validator {
     func isValidEmail(_ email: String) -> Bool { email.contains("@") }
 }
@@ -19,6 +13,15 @@ struct Validator {
 final class AuthService {
     func login(user: String, pass: String) -> Bool { user == "a" && pass == "123" }
 }//high cohesion
+
+
+/*
+ ## Coupling: how tightly classes depend on each other
+
+ Low (loose) coupling = classes are easy to separate/replace (good).
+
+ High (tight) coupling = changing one breaks the other (bad).
+ */
 
 protocol AuthServicing { func login(user: String, pass: String) -> Bool }
 
@@ -29,5 +32,6 @@ final class AuthService: AuthServicing {
 final class Controller {
     let service: AuthServicing
     init(service: AuthServicing) { self.service = service }
-}//loosly coupling 
+}//loosly coupling
 
+// for more efficient code structure, you should have loosly coupling and high cohesion.

@@ -14,4 +14,4 @@ let emptyDictionary = [String: Float]()  // Empty dictionary with String keys an
 shoppingList = []  // Empty array of Strings
 occupations = [:]  // Empty dictionary with String keys and String values
 
-
+// high order functions - map reduce
