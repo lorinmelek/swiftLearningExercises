@@ -15,8 +15,7 @@ a = b
 9 % 4    // equals 1
 
 //: ## Compound Assignment Operators
-var a = 1
-a += 2 // a is now equal to 3
+//: var a = 1 a += 2 // a is now equal to 3
 
 //: ## Comparison Operators
 /*

@@ -55,4 +55,69 @@ if quotation == sameQuotation {
 }
 // Prints "These two strings are considered equal"
 
-// hazır fonksiyonları ekle örnkelerle
+//: ## Common String Functions in Swift
+
+let text = "   Swift is amazing! 🚀   "
+
+// Checking and Searching
+print(text.hasPrefix("   Sw"))       // true
+print(text.hasSuffix("   "))       // true
+print(text.contains("amazing"))      // true
+
+// Range search
+if let range = text.range(of: "Swift") {
+    print("Found at:", range)        // prints the Range inside the string
+}
+
+// Trimming and Casing
+print(text.trimmingCharacters(in: .whitespaces))
+// "Swift is amazing "  (removes spaces)
+
+print(text.lowercased())   // "   swift is amazing!   "
+print(text.uppercased())   // "   SWIFT IS AMAZING!   "
+print(text.capitalized)    // "   Swift Is Amazing!   "
+
+// Splitting and Joining
+let csv = "apple,banana,cherry"
+let fruits = csv.split(separator: ",")      // ["apple", "banana", "cherry"]
+print(fruits)
+
+let joined = fruits.joined(separator: " | ")
+print(joined)   // "apple | banana | cherry"
+
+// Replacing
+let replaced = text.replacingOccurrences(of: "amazing", with: "powerful")
+print(replaced)   // "   Swift is powerful!    "
+
+//  Count and isEmpty
+print("Character count:", text.count)  // counts grapheme clusters, including emojis
+print("Is empty?", text.isEmpty)       // false
+
+// Index and Substring
+let greeting = "Hello, World!"
+let start = greeting.index(greeting.startIndex, offsetBy: 7)
+let end = greeting.index(greeting.startIndex, offsetBy: 11)
+let substring = greeting[start...end]
+print("Substring:", substring)   // "World"
+
+// Iterating characters
+for c in "Swift" {
+    print(c)
+}
+
+// Converting
+let numString = "123"
+if let number = Int(numString) {
+    print("Converted to Int:", number) // 123
+}
+
+// Random access (safe with indices)
+let firstChar = text[text.startIndex]
+print("First char:", firstChar)
+
+// Mutating examples
+var mutable = "Swift"
+mutable.append("UI")
+print(mutable)  // "SwiftUI"
+mutable.remove(at: mutable.startIndex)
+print(mutable)  // "wiftUI"

@@ -76,4 +76,36 @@ circle.circumference = 31.41592653589793
 print(circle.radius)  // 5.0
 print(circle.simpleDescription())  // "A circle with radius 5.0."
 
-//static class ifinal class 
+//: ## Static Members in Classes
+//: `static` means the property or method belongs to the class itself,
+//: not to individual objects. You access them with ClassName.property.
+
+class MathHelper {
+    static let pi = 3.14159
+    
+    static func square(_ x: Double) -> Double {
+        return x * x
+    }
+}
+
+print(MathHelper.pi)                // 3.14159
+print(MathHelper.square(5))         // 25.0
+
+// let helper = MathHelper() // not needed
+
+
+//: ## Final Classes
+//: `final` prevents a class from being subclassed.
+//: Useful when you want to guarantee no one overrides or inherits your class.
+
+final class Logger {
+    func log(_ message: String) {
+        print("LOG:", message)
+    }
+}
+
+let logger = Logger()
+logger.log("App started.")  // App started.
+
+// Trying to inherit from Logger would be a compile-time error:
+// class CustomLogger: Logger {}   // cannot inherit from final class
