@@ -103,11 +103,14 @@ protocol Summable {}
 extension Int: Summable {}
 extension Double: Summable {}
 
+/*
 extension Array where Element: Summable {
     func sum() -> Element {
         return reduce(0) { ($0 as! Numeric) + ($1 as! Numeric) } // see note below
     }
 }
+*/
+
 // NOTE: Swift does not have a "Summable" operator by default.
 // A better real-world way: constrain to Numeric.
 

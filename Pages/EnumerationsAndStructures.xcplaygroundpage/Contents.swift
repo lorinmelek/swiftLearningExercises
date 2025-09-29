@@ -52,3 +52,40 @@ let threeOfSpades = Card(rank: .three, suit: "spades")
 let threeOfSpadesDescription = threeOfSpades.simpleDescription()
 print(threeOfSpadesDescription)  // "The 3 of spades"
 
+//: Structs are VALUE TYPES - they are copied when assigned
+var card1 = Card(rank: .ace, suit: "hearts")
+var card2 = card1  // card2 is a COPY
+card2.rank = .king
+print("Card1: \(card1.rank.simpleDescription())")  // ace (unchanged!)
+print("Card2: \(card2.rank.simpleDescription())")  // king
+
+//: Structs can have initializers and mutating methods
+struct Deck {
+    var cards: [Card] = []
+    
+    init() {
+        let suits = ["spades", "hearts", "diamonds", "clubs"]
+        for suit in suits {
+            for rankValue in 1...13 {
+                if let rank = Rank(rawValue: rankValue) {
+                    cards.append(Card(rank: rank, suit: suit))
+                }
+            }
+        }
+    }
+    
+    mutating func shuffle() {
+        cards.shuffle()
+    }
+    
+    mutating func draw() -> Card? {
+        return cards.isEmpty ? nil : cards.removeFirst()
+    }
+}
+
+var deck = Deck()
+print("Deck has \(deck.cards.count) cards")  // 52
+if let drawnCard = deck.draw() {
+    print("Drew: \(drawnCard.simpleDescription())")
+}
+print("Deck now has \(deck.cards.count) cards")  // 51

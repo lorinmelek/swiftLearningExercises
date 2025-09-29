@@ -80,8 +80,8 @@ let zipped = Array(zip(numbers, letters))
 print("Zipped:", zipped) // [(1, "A"), (2, "B"), (3, "C"), (4, "D")]
 
 // 14) mapValues (dictionary için)
-let occupations = ["Malcolm": "Captain", "Kaylee": "Mechanic"]
-let loud = occupations.mapValues { $0.uppercased() }
+let occupation = ["Malcolm": "Captain", "Kaylee": "Mechanic"]
+let loud = occupation.mapValues { $0.uppercased() }
 print("Loud occupations:", loud)
 
 // 15) Dictionary(grouping:by:)
